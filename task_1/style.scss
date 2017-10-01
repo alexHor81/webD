@@ -1,0 +1,251 @@
+$white:white;
+$yellow:yellow;
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+ body {
+	font-family: 'Roboto', sans-serif;
+ }
+ h1,h2,h3,h4,h5,h6 {
+ 	font-family: 'Roboto Slab', serif;
+	color: $white;
+ }
+ a {
+ 	&:hover {
+ 		color:red;
+ 		background-color: $yellow;
+ 	}
+ }
+/* -------------------Header----------------*/
+ header{
+ 		position: relative;
+
+ 	 img.slika{
+ 	 	padding-right: 0;
+ 	 	padding-bottom: 0;
+ 	 }
+ 	 .naslovi {
+ 	 	position: absolute;
+ 	 	left: 25%;
+ 	 	bottom: 0;
+ 	 	right: 25%;
+		h1{
+			
+			&:hover {
+				color: $yellow;
+				text-decoration: underline;
+			}
+		}
+ 	 	
+ 	 	.headline{
+ 	 		border-bottom: 1px solid $white;
+		}
+		.author{
+			color: $white;
+			i {
+				color:yellow;
+				}
+ 			}
+		}
+ 	}
+
+/*--------------Slider-----------------------------*/
+
+.slider {
+
+	overflow: hidden;
+	height: 25em;
+	
+
+	figure {
+		position: relative;
+		width: 200%;
+		margin: 0;
+		left: 0;
+		animation: 10s slidy infinite;
+		div {
+			width: 50%;
+			float: left;
+		}
+		img{
+		width: 100%;
+		float: left;
+		}
+	}
+}
+
+@keyframes slidy{
+	0%{
+		left: -100%
+	}
+
+	10%{
+		left: -100%;
+	}
+
+	12%{
+		left: -100%;
+	}
+
+	22%{
+		left: -100%;
+	}
+
+	24%{
+		left: -100%;
+	}
+
+	34%{
+		left: -100%;
+	}
+
+	36%{
+		left: -100%;
+	}
+
+	46%{
+		left: -100%;
+	}
+
+	48%{
+		left: -100%;
+	}
+
+	58%{
+		left: 0%;
+	}
+
+	60%{
+		left:  0%;
+	}
+
+	70%{
+		left:  0%;
+	}
+
+	72%{
+		left: 0%;
+	}
+
+	82%{
+		left:  0%;
+	}
+
+	84%{
+		left:  0%;
+	}
+
+	94%{
+		left:  0%;
+	}
+
+	96%{
+		left: 0%;
+	}
+
+	100%{
+		left: 0%;
+	}
+}
+
+
+/*------------- paragtafs,qoutes and ul------------*/
+ 	.container1 {
+ 		width: 50%;
+ 		margin: 0 auto;
+ 		line-height: 2;
+		margin-top: 2em;
+ 		blockquote	 {
+ 			font-size: 2.5em;
+ 		}
+ 		ul {
+ 			list-style-type: "disc";
+ 			list-style-position: inside;
+ 			text-indent: 2em;
+ 		}
+ 	}
+/*---------------SHARE BUTTON-----------------------*/
+ 	.shareBtn {
+ 		background: linear-gradient(#212F35,gray);
+ 		min-height: 8em;
+ 		position: relative;
+ 		text-align: center;
+ 		
+		button {
+			position: relative;
+			top: 3em;
+			background-color: transparent;
+			border: 1px solid #2ECD71;
+			border-radius: 25px;
+			font-size: 1em;
+			padding: 8px;
+			color: #2ECD71;
+			&:hover {
+				color:$white;
+				background-color: #2ECD71;	
+			}
+
+		}
+	}
+
+	/* The Modal  preuzeo sa w3school..ovaj deo nisam znao samostalno da uradim*/
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* ipak sam izmeni pozicioniranje*/
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*---------------TWO ARTICLES----------------------*/
+ 	article {
+ 		min-height: 15em;
+ 		#first{
+ 			min-height: 18em;
+ 			background-image: url("img/1.png");
+ 			background-size: cover;
+ 			opacity: 1;
+ 			&:hover {
+ 				background-color: grey;
+ 				opacity: 0.5;
+ 			}
+ 		}
+ 		#second {
+ 			@extend #first;
+ 			background-image: url("img/2.png");
+ 		}
+ 		.text {
+ 			margin-top: 2em;
+ 		}
+ 	}
